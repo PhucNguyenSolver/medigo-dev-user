@@ -14,3 +14,6 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Nothing to do in the post_build phase...
+artifacts:
+  files:
+    - target/it-should-show-up.txt
