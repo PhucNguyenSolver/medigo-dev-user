@@ -4,6 +4,9 @@ pipeline {
         ACCESS_KEY = credentials('AWS_ACCESS_KEY') 
         SECRET_KEY = credentials('AWS_SECRET_KEY') 
     }
+    triggers {
+        pollSCM('*/1 * * * *')
+    }
     stages {
         stage('build') {
             steps {
