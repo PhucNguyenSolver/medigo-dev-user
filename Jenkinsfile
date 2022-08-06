@@ -1,10 +1,20 @@
 pipeline {
-    agent { docker { image 'node:16.13.1-alpine' } }
+    agent any
     stages {
         stage('build') {
             steps {
-                sh 'node --version'
+                echo "building app with codebuild ..."
             }
+        }
+        stage('test') {
+            steps {
+                echo "testing app with devicefarm ..."
+            }
+        }
+    }
+    post {
+        always {
+            echo "sending email report ..."
         }
     }
 }
