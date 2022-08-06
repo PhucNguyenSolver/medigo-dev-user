@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    triggers {
-        # cron('*/5 * * * *')
-    }
     environment { 
         ACCESS_KEY = credentials('AWS_ACCESS_KEY') 
         SECRET_KEY = credentials('AWS_SECRET_KEY') 
