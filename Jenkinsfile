@@ -26,6 +26,7 @@ pipeline {
     post {
         always {
             echo "sending email report ..."
+            echo "to recipient: ${CHANGE_AUTHOR_EMAIL}"
         }
     }
 }
