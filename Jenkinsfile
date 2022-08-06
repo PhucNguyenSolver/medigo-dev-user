@@ -1,7 +1,7 @@
 pipeline {
     agent any
     triggers {
-        cron('*/5 * * * *')
+        # cron('*/5 * * * *')
     }
     environment { 
         ACCESS_KEY = credentials('AWS_ACCESS_KEY') 
@@ -26,7 +26,6 @@ pipeline {
     post {
         always {
             echo "sending email report ..."
-            sh "printenv"
         }
     }
 }
