@@ -22,6 +22,7 @@ pipeline {
     post {
         always {
             echo "sending email report ..."
+            echo "sending email report ..."
         }
     }
 }
