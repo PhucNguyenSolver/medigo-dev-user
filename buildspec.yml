@@ -4,14 +4,14 @@ phases:
   install:
     commands:
       - echo Nothing to do in the install phase...
-      - node -v || echo "node not found"
-      - $(aws ecr get-login --region ${AWS_REGION})
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase...
   build:
     commands:
       - echo Build started on `date`
+      - node -v || echo "node not found"
+      - $(aws ecr get-login --region ${AWS_REGION})
   post_build:
     commands:
       - echo Build completed on `date`
